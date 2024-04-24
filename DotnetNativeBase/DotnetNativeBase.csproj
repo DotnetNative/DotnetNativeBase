@@ -8,6 +8,10 @@
     <Title>DotnetNativeBase</Title>
     <Authors>Yotic</Authors>
     <Description>A library containing structures for easy use of C# in native build</Description>
+    <PackageProjectUrl>https://github.com/DotnetNative/DotnetNativeBase</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DotnetNative/DotnetNativeBase</RepositoryUrl>
+    <PackageTags>naot korn dnb native</PackageTags>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
