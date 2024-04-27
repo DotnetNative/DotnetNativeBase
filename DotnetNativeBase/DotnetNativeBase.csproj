@@ -17,10 +17,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\Pack.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <None Remove="LICENSE.txt" />
+    <None Remove="PACK.md" />
+    <None Remove="README.md" />
   </ItemGroup>
 
   <ItemGroup>
