@@ -13,12 +13,11 @@
     <PackageTags>naot korn dnb native</PackageTags>
     <Version>1.0.1</Version>
     <Platforms>AnyCPU;x64</Platforms>
-    <PackageReadmeFile>Pack.md</PackageReadmeFile>
+    <PackageReadmeFile>PACK.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="LICENSE.txt" />
-    <None Remove="PACK.md" />
     <None Remove="README.md" />
   </ItemGroup>
 
