@@ -29,4 +29,6 @@ public unsafe struct pointer
     public static implicit operator nuint*(pointer pointer) => (nuint*)pointer.Address;
 
     public static implicit operator delegate* unmanaged<void>(pointer pointer) => (delegate* unmanaged<void>)pointer;
+
+    public override string ToString() => $"0x{Address:X}";
 }
