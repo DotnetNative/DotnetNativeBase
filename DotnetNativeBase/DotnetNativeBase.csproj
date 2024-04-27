@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -7,29 +6,27 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Title>DotnetNativeBase</Title>
     <Authors>Yotic</Authors>
-    <Description>A library containing structures for easy use of C# in native build</Description>
+    <Description>Library containing structures for easy use of C# in native build</Description>
     <PackageProjectUrl>https://github.com/DotnetNative/DotnetNativeBase</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DotnetNative/DotnetNativeBase</RepositoryUrl>
     <PackageTags>naot korn dnb native</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Platforms>x64</Platforms>
     <PackageReadmeFile>PACK.md</PackageReadmeFile>
 	<IncludeContentInPack>true</IncludeContentInPack>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-  </PropertyGroup>
-	
+  </PropertyGroup>	
   <ItemGroup>
     <Using Include="System.Runtime.InteropServices" />
-	  <None Include="LICENSE.txt">
-		  <Pack>true</Pack>
-		  <PackagePath></PackagePath>
-		  <Visible>True</Visible>
-	  </None>
 	  <None Include="PACK.md">
 		  <Pack>true</Pack>
 		  <PackagePath></PackagePath>
-		  <Visible>True</Visible>
+		  <Visible>False</Visible>
+	  </None>
+	  <None Include="..\LICENSE.txt">
+		  <Pack>true</Pack>
+		  <PackagePath></PackagePath>
+		  <Visible>False</Visible>
 	  </None>
   </ItemGroup>
-
 </Project>

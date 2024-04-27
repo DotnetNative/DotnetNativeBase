@@ -1,1 +1,1 @@
-A library containing structures for easy use of C# in native build
+Library containing structures for easy use of C# in native build
