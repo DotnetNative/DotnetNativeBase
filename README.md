@@ -7,6 +7,6 @@ Every DotnetNative project refers to this library.
 Versions
 ------------------------------
 | Start ordinal | Framework | Description | Date |
-| ---   | ---     | ---                                               | ---          |
+| ---   | ---     | ---               | ---          |
 | 1.0.3 | .net8.0 | Added MIT License | Unpushed     |
-| 1.0.0 | .net8.0 |                                                   | Mar 9, 2023  |
+| 1.0.0 | .net8.0 |                   | Mar 9, 2023  |
