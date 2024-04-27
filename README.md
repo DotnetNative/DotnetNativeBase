@@ -8,5 +8,5 @@ Versions
 ------------------------------
 | Start ordinal | Framework | Description       | Date         |
 | ---           | ---       | ---               | ---          |
-| 1.0.3         | .net8.0   | Added MIT License | Unpushed     |
+| 1.0.3         | .net8.0   | Added MIT License | Apr 28, 2024 |
 | 1.0.0         | .net8.0   |                   | Apr 24, 2024 |
