@@ -11,18 +11,25 @@
     <PackageProjectUrl>https://github.com/DotnetNative/DotnetNativeBase</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DotnetNative/DotnetNativeBase</RepositoryUrl>
     <PackageTags>naot korn dnb native</PackageTags>
-    <Version>1.0.1</Version>
-    <Platforms>AnyCPU;x64</Platforms>
+    <Version>1.0.2</Version>
+    <Platforms>x64</Platforms>
     <PackageReadmeFile>PACK.md</PackageReadmeFile>
+	<IncludeContentInPack>true</IncludeContentInPack>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="LICENSE.txt" />
-    <None Remove="README.md" />
-  </ItemGroup>
-
+	
   <ItemGroup>
     <Using Include="System.Runtime.InteropServices" />
+	  <None Include="LICENSE.txt">
+		  <Pack>true</Pack>
+		  <PackagePath></PackagePath>
+		  <Visible>True</Visible>
+	  </None>
+	  <None Include="PACK.md">
+		  <Pack>true</Pack>
+		  <PackagePath></PackagePath>
+		  <Visible>True</Visible>
+	  </None>
   </ItemGroup>
 
 </Project>
