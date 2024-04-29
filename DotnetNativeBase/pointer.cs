@@ -5,21 +5,33 @@ public unsafe struct pointer
 
     public nint Address;
 
+    public byte this[nint index] => ((byte*)Address)[index];
+
+    public override string ToString() => $"0x{Address:X}";
+    public override bool Equals(object? obj) => obj is null ? false : obj is pointer ? (((pointer)obj).Address == Address) : false;
+    public override int GetHashCode() => ((int)Address) ^ ((int)(Address >> 32));
+
     #region Operators
-    public static pointer operator +(pointer a, pointer b) => new(a.Address + b.Address);
-    public static pointer operator -(pointer a, pointer b) => new(a.Address - b.Address);
+    public static pointer operator +(pointer a, pointer b) => a.Address + b.Address;
+    public static pointer operator -(pointer a, pointer b) => a.Address - b.Address;
     public static pointer operator ++(pointer self) => self.Address++;
     public static pointer operator --(pointer self) => self.Address--;
-    public static pointer operator *(pointer a, pointer b) => new(a.Address * b.Address);
-    public static pointer operator /(pointer a, pointer b) => new(a.Address / b.Address);
-    public static pointer operator %(pointer a, pointer b) => new(a.Address % b.Address);
-    public static pointer operator &(pointer a, pointer b) => new(a.Address & b.Address);
-    public static pointer operator ^(pointer a, pointer b) => new(a.Address ^ b.Address);
-    public static pointer operator |(pointer a, pointer b) => new(a.Address | b.Address);
-    #endregion
-
-    #region Object
-    public override string ToString() => $"0x{Address:X}";
+    public static pointer operator ~(pointer self) => ~self.Address;
+    public static pointer operator *(pointer a, pointer b) => a.Address * b.Address;
+    public static pointer operator /(pointer a, pointer b) => a.Address / b.Address;
+    public static pointer operator %(pointer a, pointer b) => a.Address % b.Address;
+    public static pointer operator &(pointer a, pointer b) => a.Address & b.Address;
+    public static pointer operator ^(pointer a, pointer b) => a.Address ^ b.Address;
+    public static pointer operator |(pointer a, pointer b) => a.Address | b.Address;
+    public static pointer operator >>(pointer a, int shift) => a.Address >> shift;
+    public static pointer operator <<(pointer a, int shift) => a.Address << shift;
+    public static pointer operator >>>(pointer a, int shift) => a.Address >>> shift;
+    public static bool operator <(pointer a, pointer b) => a.Address < b.Address;
+    public static bool operator <=(pointer a, pointer b) => a.Address <= b.Address;
+    public static bool operator >(pointer a, pointer b) => a.Address > b.Address;
+    public static bool operator >=(pointer a, pointer b) => a.Address >= b.Address;
+    public static bool operator ==(pointer a, pointer b) => a.Address == b.Address;
+    public static bool operator !=(pointer a, pointer b) => a.Address != b.Address;
     #endregion
 
     #region Implicits

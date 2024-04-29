@@ -10,7 +10,7 @@
     <PackageProjectUrl>https://github.com/DotnetNative/DotnetNativeBase</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DotnetNative/DotnetNativeBase</RepositoryUrl>
     <PackageTags>naot korn dnb native</PackageTags>
-    <Version>1.0.3</Version>
+    <Version>1.0.5</Version>
     <Platforms>x64</Platforms>
     <PackageReadmeFile>PACK.md</PackageReadmeFile>
 	<IncludeContentInPack>true</IncludeContentInPack>
