@@ -30,6 +30,9 @@ public unsafe struct pointer
     public static implicit operator pointer(delegate* unmanaged<void> ptr) => new((nint)ptr);
 
     public static implicit operator nint(pointer pointer) => pointer.Address;
+    public static implicit operator nuint(pointer pointer) => (nuint)pointer.Address;
+    public static implicit operator long(pointer pointer) => pointer.Address;
+    public static implicit operator ulong(pointer pointer) => (ulong)pointer.Address;
 
     public static implicit operator void*(pointer pointer) => (void*)pointer.Address;
     public static implicit operator void**(pointer pointer) => (void**)pointer.Address;
