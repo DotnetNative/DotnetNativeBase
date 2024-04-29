@@ -10,11 +10,13 @@
     <PackageProjectUrl>https://github.com/DotnetNative/DotnetNativeBase</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DotnetNative/DotnetNativeBase</RepositoryUrl>
     <PackageTags>naot korn dnb native</PackageTags>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
     <Platforms>x64</Platforms>
     <PackageReadmeFile>PACK.md</PackageReadmeFile>
 	<IncludeContentInPack>true</IncludeContentInPack>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageIcon>DotnetNativeLogo.png</PackageIcon>
   </PropertyGroup>	
   <ItemGroup>
     <Using Include="System.Runtime.CompilerServices" />
@@ -22,15 +24,20 @@
       <Static>True</Static>
     </Using>
     <Using Include="System.Runtime.InteropServices" />
-	  <None Include="PACK.md">
-		  <Pack>true</Pack>
-		  <PackagePath></PackagePath>
-		  <Visible>False</Visible>
-	  </None>
-	  <None Include="..\LICENSE.txt">
-		  <Pack>true</Pack>
-		  <PackagePath></PackagePath>
-		  <Visible>False</Visible>
-	  </None>
+    <None Include="..\..\..\..\..\..\DotnetNativeLogo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+	  <Visible>False</Visible>		
+    </None>
+	<None Include="PACK.md">
+	  <Pack>true</Pack>
+	  <PackagePath></PackagePath>
+	  <Visible>False</Visible>
+	</None>
+	<None Include="..\LICENSE.txt">
+	  <Pack>true</Pack>
+	  <PackagePath></PackagePath>
+	  <Visible>False</Visible>
+	</None>
   </ItemGroup>
 </Project>
