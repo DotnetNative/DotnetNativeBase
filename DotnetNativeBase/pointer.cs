@@ -5,6 +5,24 @@ public unsafe struct pointer
 
     public nint Address;
 
+    #region Operators
+    public static pointer operator +(pointer a, pointer b) => new(a.Address + b.Address);
+    public static pointer operator -(pointer a, pointer b) => new(a.Address - b.Address);
+    public static pointer operator ++(pointer self) => self.Address++;
+    public static pointer operator --(pointer self) => self.Address--;
+    public static pointer operator *(pointer a, pointer b) => new(a.Address * b.Address);
+    public static pointer operator /(pointer a, pointer b) => new(a.Address / b.Address);
+    public static pointer operator %(pointer a, pointer b) => new(a.Address % b.Address);
+    public static pointer operator &(pointer a, pointer b) => new(a.Address & b.Address);
+    public static pointer operator ^(pointer a, pointer b) => new(a.Address ^ b.Address);
+    public static pointer operator |(pointer a, pointer b) => new(a.Address | b.Address);
+    #endregion
+
+    #region Object
+    public override string ToString() => $"0x{Address:X}";
+    #endregion
+
+    #region Implicits
     public static implicit operator pointer(nint address) => new(address);
     public static implicit operator pointer(void* pointer) => new((nint)pointer);
     public static implicit operator pointer(void** pointer) => new((nint)pointer);
@@ -29,6 +47,5 @@ public unsafe struct pointer
     public static implicit operator nuint*(pointer pointer) => (nuint*)pointer.Address;
 
     public static implicit operator delegate* unmanaged<void>(pointer pointer) => (delegate* unmanaged<void>)pointer;
-
-    public override string ToString() => $"0x{Address:X}";
+    #endregion
 }
