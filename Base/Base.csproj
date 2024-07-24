@@ -21,6 +21,12 @@
     <Product>DotnetNative.Base</Product>
     <AssemblyName>DotnetNative.Base</AssemblyName>
     <RootNamespace>DotnetNative.Base</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NoWarn>1701;1702;CS8500</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NoWarn>1701;1702;CS8500</NoWarn>
   </PropertyGroup>	
   <ItemGroup>
     <Using Include="System.Runtime.CompilerServices" />

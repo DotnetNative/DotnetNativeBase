@@ -1,5 +1,4 @@
-﻿#pragma warning disable CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
-public unsafe struct pointer
+﻿public unsafe struct pointer
 {
     public pointer(nint address) => Address = address;
 
@@ -99,4 +98,3 @@ public unsafe struct pointer
     [MethodImpl(AggressiveInlining)] public static implicit operator delegate* unmanaged<void>(pointer pointer) => (delegate* unmanaged<void>)pointer;
     #endregion
 }
-#pragma warning restore CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
